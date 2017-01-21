@@ -64,7 +64,7 @@ public class cipher {
   //keyword of the cipher
   public static String getKey(boolean b) {
     Scanner sc=new Scanner(System.in);
-    System.out.println("Enter the keyword - must be 5 characters long: ");
+    System.out.println("Enter the keyword: ");
     
     //store coded keyword in String 'key'
     String key = sc.next();
