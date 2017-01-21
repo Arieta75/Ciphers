@@ -30,8 +30,7 @@ public class cipher {
     System.out.println("Would you like to encipher or decipher your text?");
     //stores the String literal answer in 'method', then pushes to upper case
     String method = s.nextLine();
-    method = method.toUpperCase();
-    
+    method = method.toUpperCase();    
     
     if(method.equals("ENCIPHER")) {
       String message = getMessage();
@@ -94,6 +93,7 @@ public class cipher {
   }
   
   public static char runDecipher(int i, int y, String message, String keyword) {
+    //uses i if i <= 4; uses adjusted value of i if i > 4
     if (y == -1) {
       y = i;
     }
