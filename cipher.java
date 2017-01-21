@@ -30,7 +30,8 @@ public class cipher {
     System.out.println("Would you like to encipher or decipher your text?");
     //stores the String literal answer in 'method', then pushes to upper case
     String method = s.nextLine();
-    method = method.toUpperCase();    
+    method = method.toUpperCase();
+    
     
     if(method.equals("ENCIPHER")) {
       String message = getMessage();
@@ -64,7 +65,7 @@ public class cipher {
   //keyword of the cipher
   public static String getKey(boolean b) {
     Scanner sc=new Scanner(System.in);
-    System.out.println("Enter the keyword: ");
+    System.out.println("What is the keyword?");
     
     //store coded keyword in String 'key'
     String key = sc.next();
@@ -76,8 +77,7 @@ public class cipher {
       return key;
     }
     
-    //if getKey() was called to decipher, prints warning note if key is wrong but still returns key
-    //completely unnecessary if using other keywords
+    //if getKey() was called to decipher, prints warning note if key is wrong but still returns key 
     else {
       if (key.equals("WOLFE") == false) {
         System.out.println("Bzzt! You guessed wrong and the following message will not make sense.");
@@ -94,7 +94,6 @@ public class cipher {
   }
   
   public static char runDecipher(int i, int y, String message, String keyword) {
-    //uses i if i <= 4; uses adjusted value of i if i > 4
     if (y == -1) {
       y = i;
     }
@@ -127,7 +126,6 @@ public class cipher {
      */
     
     return newLetter;
-    
     }
   }
   
@@ -156,8 +154,8 @@ public class cipher {
         plainText.append(newLetter);  
       }
     }
-    System.out.println(plainText);
     
+    System.out.println(plainText);
   }
   
   
@@ -204,7 +202,7 @@ public class cipher {
     int newRank = indexMessage + indexKey;
     newRank = newRank%26 + 65;
     char newLetter = (char)newRank;
-    
+   
     /*Error spotting: uncomment to print out each step's result
     System.out.println("i = " + i);
     System.out.print("The key letter: " + firstKeyLetter + "  ");
