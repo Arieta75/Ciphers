@@ -35,13 +35,13 @@ public class cipher {
     
     if(method.equals("ENCIPHER")) {
       String message = getMessage();
-      String keyword = getKey(true);
+      String keyword = getKey();
       encipherText(message, keyword);
     }
     
     else if(method.equals("DECIPHER")){
       String message = getMessage();
-      String keyword = getKey(false);
+      String keyword = getKey();
       decipherText(message, keyword);
     }
     
@@ -63,28 +63,16 @@ public class cipher {
   }
   
   //keyword of the cipher
-  public static String getKey(boolean b) {
+  public static String getKey() {
     Scanner sc=new Scanner(System.in);
     System.out.println("What is the keyword?");
     
     //store coded keyword in String 'key'
     String key = sc.next();
     key = key.toUpperCase();
+    sc.close(); 
+    return key;
     
-    //if getKey() was called to encipher, will accept any key without message
-    if (b) {
-      sc.close();
-      return key;
-    }
-    
-    //if getKey() was called to decipher, prints warning note if key is wrong but still returns key 
-    else {
-      if (key.equals("WOLFE") == false) {
-        System.out.println("Bzzt! You guessed wrong and the following message will not make sense.");
-      }
-      sc.close(); 
-      return key;
-    }
   }
   
   public static int getLength(String message) {
