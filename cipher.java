@@ -76,7 +76,8 @@ public class cipher {
       return key;
     }
     
-    //if getKey() was called to decipher, prints warning note if key is wrong but still returns key 
+    //if getKey() was called to decipher, prints warning note if key is wrong but still returns key
+    //completely unnecessary if using other keywords
     else {
       if (key.equals("WOLFE") == false) {
         System.out.println("Bzzt! You guessed wrong and the following message will not make sense.");
