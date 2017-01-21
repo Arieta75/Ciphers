@@ -52,7 +52,7 @@ public class cipher {
   //gets the message to be encoded or decoded
   public static String getMessage() {
     Scanner sc = new Scanner(System.in);
-    System.out.println("Please input your message to the console.");
+    System.out.println("Please input your message to the console without any punctuation.");
     
     //store coded message in String 'message'
     String message = sc.nextLine();
