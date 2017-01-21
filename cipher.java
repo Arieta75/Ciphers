@@ -71,7 +71,7 @@ public class cipher {
     key = key.toUpperCase();
     sc.close(); 
     return key;
-    }
+    
   }
   
   public static int getLength(String message) {
