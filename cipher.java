@@ -34,7 +34,7 @@ public class cipher {
     
     if(method.equals("ENCIPHER")) {
       String message = getMessage();
-      String keyword = getKey(true);
+      String keyword = getKey();
       encipherText(message, keyword);
     }
     
@@ -69,21 +69,8 @@ public class cipher {
     //store coded keyword in String 'key'
     String key = sc.next();
     key = key.toUpperCase();
-    
-    //if getKey() was called to encipher, will accept any key without message
-    if (b) {
-      sc.close();
-      return key;
-    }
-    
-    //if getKey() was called to decipher, prints warning note if key is wrong but still returns key
-    //completely unnecessary if using other keywords
-    else {
-      if (key.equals("WOLFE") == false) {
-        System.out.println("Bzzt! You guessed wrong and the following message will not make sense.");
-      }
-      sc.close(); 
-      return key;
+    sc.close(); 
+    return key;
     }
   }
   
