@@ -102,17 +102,6 @@ public class cipher {
         newRank = newRank + 26;
       }
     char newLetter = (char)newRank; 
-        
-     /*Error spotting: uncomment to print out each step's result
-     System.out.println("i = " + i);
-     System.out.print("The key letter: " + firstKeyLetter + "  ");
-     System.out.println("The code letter: " + firstLetter);
-     System.out.print("The ASCII code: " + indexMessage + "  ");
-     System.out.println("The ASCII code key: " +indexKey);
-     System.out.print("The new ASCII code: " + newRank + "  ");
-     System.out.println("The new letter: " + newLetter);  
-     */
-    
     return newLetter;
     }
   }
@@ -190,16 +179,6 @@ public class cipher {
     int newRank = indexMessage + indexKey;
     newRank = newRank%26 + 65;
     char newLetter = (char)newRank;
-   
-    /*Error spotting: uncomment to print out each step's result
-    System.out.println("i = " + i);
-    System.out.print("The key letter: " + firstKeyLetter + "  ");
-    System.out.println("The message letter: " + firstLetter);
-    System.out.print("The ASCII code: " + indexMessage + "  ");
-    System.out.println("The ASCII code for key: " + indexKey);
-    System.out.print("The new ASCII code for letter: " + newRank + "  ");
-    System.out.println("The new letter: " + newLetter);  
-    */
     return newLetter;
     }
   }
